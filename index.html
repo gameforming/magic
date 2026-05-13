@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Magic Web App</h1>
+
+  <div class="search">
+    <input id="searchInput" placeholder="Zoek kaart...">
+    <button onclick="searchCards()">Zoeken</button>
+  </div>
+</header>
+
+<section id="results"></section>
+
+<h2>Deck</h2>
+<section id="deck"></section>
+
+<div class="players">
+
+  <div class="player">
+    <h2>Speler 1</h2>
+
+    <div class="life">
+      <button onclick="changeLife(1,-1)">-</button>
+      <span id="life1">20</span>
+      <button onclick="changeLife(1,1)">+</button>
+    </div>
+
+    <div id="board1" class="board"></div>
+  </div>
+
+  <div class="player">
+    <h2>Speler 2</h2>
+
+    <div class="life">
+      <button onclick="changeLife(2,-1)">-</button>
+      <span id="life2">20</span>
+      <button onclick="changeLife(2,1)">+</button>
+    </div>
+
+    <div id="board2" class="board"></div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
